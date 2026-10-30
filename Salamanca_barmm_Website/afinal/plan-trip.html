@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip - BARMM Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <a href="plan-trip.html" class="logo">
+                <img src="Asset/icons/moon.png" alt="BARMM Logo" class="logo-img">
+                Explore BARMM
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="history.html">History &amp; Culture</a></li>
+                    <li><a href="#">Plan Your Trip</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Plan Your Trip</h1>
+        <p>Your complete guide to exploring BARMM safely and comfortably</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- 3-Day Itinerary Table -->
+        <div class="content-box">
+            <h2 class="section-title">Suggested 3-Day Tour Itinerary</h2>
+            <div class="table-responsive">
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Photo</th>
+                            <th>Morning</th>
+                            <th>Afternoon</th>
+                            <th>Evening</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><img src="Asset/image/Pink Mosque.jpg" alt="Day 1 - Cotabato City" class="day-img"></td>
+                            <td>Arrival in Cotabato City &amp; Hotel Check-in</td>
+                            <td>Visit Grand Mosque &amp; Pink Mosque</td>
+                            <td>Pastil &amp; local delicacies dinner in Cotabato</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><img src="Asset/image/Ask-asik-Falls.jpg" alt="Day 2 - Asik-Asik Falls" class="day-img"></td>
+                            <td>Day trip to Asik-Asik Waterfalls</td>
+                            <td>Inaul Weaving Village visit</td>
+                            <td>Night Market shopping for local crafts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><img src="Asset/image/Panampangan-Island.jpg" alt="Day 3 - Tawi-Tawi" class="day-img"></td>
+                            <td>Flight to Tawi-Tawi &amp; Sandbar Island Hopping</td>
+                            <td>Trek Bud Bongao Sacred Mountain</td>
+                            <td>Fresh seafood dinner &amp; souvenir shopping</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Travel Tips & Packing List Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+
+            <div class="content-box" style="margin-bottom: 0;">
+                <h2 class="section-title">Travel Tips</h2>
+                <ul>
+                    <li>Dress modestly when visiting religious sites and mosques (cover shoulders and knees).</li>
+                    <li>Always bring cash (PHP) as ATMs can be limited in island provinces like Tawi-Tawi.</li>
+                    <li>Coordinate with local tourism officers for island hopping tours and local guides.</li>
+                    <li>Respect local Islamic customs and prayer times.</li>
+                </ul>
+            </div>
+
+            <div class="content-box" style="margin-bottom: 0;">
+                <h2 class="section-title">Packing Checklist</h2>
+                <ul>
+                    <li>Modest clothing (scarves, long trousers, sleeved shirts)</li>
+                    <li>Light breathable cotton clothes for tropical weather</li>
+                    <li>Sun protection (sunscreen, hat, sunglasses)</li>
+                    <li>Dry bag &amp; water shoes for island trips</li>
+                    <li>Rechargeable power bank &amp; cash currency</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="content-box">
+            <h2 class="section-title">Inquire / Book Your Trip</h2>
+            <form action="#" method="get">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="juan@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visit-date">Planned Visit Date:</label>
+                    <input type="date" id="visit-date" name="visit-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers:</label>
+                    <input type="number" id="travelers" name="travelers" min="1" max="50" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Questions / Notes:</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Tell us about special requests or questions..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 BARMM Tourism Office. All rights reserved.</p>
+        <p>Contact: info@barmmtourism.gov.ph | Phone: (069) 352-4900</p>
+    </footer>
+
+</body>
+</html>

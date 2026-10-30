@@ -1,0 +1,725 @@
+/* BARMM Tourism Website Main Stylesheet*/
+/* Theme Colors:Maroon and yellow*/
+
+/* NAA DIRI ANG MGA NAGAMIT across ALL pages: Header, Navigation Bar, Body, & Footer) */
+
+/* ---  --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* para smooth ang scroll kung mo click ug link */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8fafc;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style-type: square;
+    margin-left: 1.5rem;
+}
+
+/* --- NAA HERE ANG SHARED NAVIGATION HEADER  --- */
+header {
+    background-color: rgb(74, 14, 23);
+    color: #ffffff;   /* TEXT COLOR*/
+    padding: 1rem 5%;   /*ANG NAG ADD SA INNER SPACING INSIDE SA HEADER */
+    position: sticky;  /*PARA ALWAYS SYA VISIBLE ALL THE TIME*/
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /*SHAD*/
+    border-bottom: 3px solid #f59e0b;  /* gold line sa ubos sa header */
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Logo: gamay nga image + text (Explore BARMM) nag tapad */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;                /* space tali sa image ug text */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f59e0b; /*COLOR SA LOGO NA TEXT*/
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+/* Local Logo Image - gi gamay para mo fit sa text */
+.logo-img {
+    width: 40px;              /* ilisi ang size diri kung gusto nimo mas dako/gamay */
+    height: 40px;
+    object-fit: contain;      /* dili ma distort ang image */
+    border-radius: 50%;       /* round logo - tangtanga ni kung dili gusto round */
+    flex-shrink: 0;           /* dili mo gamay ang image kung dugay ang text */
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+nav ul li {
+    margin-left: 1.5rem;
+}
+nav ul li a {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #f59e0b;
+    color: #800020;
+    transform: translateY(-2px);
+}
+/* ---Secondary Page Banner --- */
+.page-header {
+    background-color: #5a0014;
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+.page-header h1 {
+    font-size: 2.2rem;
+    color: #f59e0b;
+}
+/* --- Container OG Cards --- */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #800020;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #f59e0b;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+.intro-card, .content-box {
+    background: #ffffff;
+    padding: 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+}
+/* --- Shared Footer --- */
+footer {
+    background-color: #2b0a10;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    margin-top: 3rem;
+    border-top: 3px solid #f59e0b;
+}
+footer p {
+    margin-bottom: 0.3rem;
+}
+footer a {
+    color: #f59e0b;
+}
+
+/* Hero Banner on Homepage */
+/* INDEX.HTML (HOMEPAGE BANNER) */
+
+.hero-banner {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    background-color: #5a0014;                       
+    background-image: url("Asset/image/BARMM.jpg"); /* ang banner photo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(90, 0, 20, 0.55);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding-top: 25vh;
+    animation: fadeUp 1s ease;   /* mo fade in ang text pag load */
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: #fef3c7;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* (DESTINATIONS POPULAR DESTINATIONS)
+   (preview card sa  index.html)*/
+
+/* Tourist Spot Cards OG Image Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 14, 23, 0.25);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);   /* gamay nga zoom pag hover */
+}
+
+.gallery-card .card-info {
+    padding: 1.2rem;
+}
+
+.gallery-card h3 {
+    color: #800020;
+    margin-bottom: 0.5rem;
+}
+
+.location-tag {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #d97706;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ===== Video Card (above sa footer) ===== */
+.video-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.video-card:hover {
+    box-shadow: 0 10px 20px rgba(74, 14, 23, 0.25);
+}
+
+.video-card video {
+    display: block;
+    width: 100%;
+    height: 500px;           /* short banner; taasi ang number kung gusto mas dako */
+    object-fit: cover;
+    background-color: #000000;
+}
+
+.video-info {
+    padding: 1.2rem;
+}
+
+.video-info h3 {
+    color: #800020;
+    margin: 0.5rem 0;
+}
+
+.video-info p {
+    color: #444444;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #d97706;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+/* ACTIVITIES.HTML (THINGS TO DO STYLES)*/
+
+/* --- Jump bar (the 4 buttons under the page header) --- */
+.jump-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.jump-bar a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    color: #800020;
+    font-weight: 600;
+    padding: 0.6rem 1.1rem;
+    border-radius: 30px;
+    border: 2px solid #f59e0b;
+    transition: all 0.3s ease;
+}
+
+.jump-bar a:hover {
+    background-color: #f59e0b;
+    transform: translateY(-2px);
+}
+
+.jump-bar img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* --- Each category section --- */
+.activity-section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 110px;   /* para dili matabunan sa sticky header */
+}
+
+/* Colored title bar of each section */
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.section-head h2 {
+    font-size: 1.5rem;
+}
+
+.section-head p {
+    font-size: 0.95rem;
+}
+
+/* White circle that holds the big icon */
+.big-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.big-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* --- Cards grid --- */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+.activity-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 14, 23, 0.25);
+}
+
+/* Photo on top of the card */
+.card-img {
+    height: 180px;
+    overflow: hidden;
+    background-color: #dddddd;   /* kulay kung wala pa ang picture */
+}
+
+.card-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.activity-card:hover .card-img img {
+    transform: scale(1.07);   /* gamay nga zoom pag hover */
+}
+
+/* Text part of the card */
+.card-body {
+    padding: 0 1.3rem 1.3rem 1.3rem;
+}
+
+/* Small icon box that overlaps the photo */
+.card-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    margin-top: -28px;      /* gi-taas para mo overlap sa picture */
+    margin-bottom: 0.7rem;
+    position: relative;
+}
+
+.card-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.activity-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.activity-card p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin-bottom: 0.9rem;
+}
+
+/* Small location tag */
+.place-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    font-weight: bold;
+    padding: 0.25rem 0.7rem;
+    border-radius: 30px;
+}
+
+.place-chip img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* ---------- 9D. COLORS PER CATEGORY ---------- */ 
+/* Nature = green */
+
+.theme-nature .section-head   { background-color: #15803d; }
+.theme-nature .activity-card  { border-bottom: 5px solid #15803d; }
+.theme-nature .card-icon      { background-color: #dcfce7; }
+.theme-nature h3              { color: #15803d; }
+.theme-nature .place-chip     { background-color: #dcfce7; color: #15803d; }
+
+/* Culture = maroon */
+.theme-culture .section-head  { background-color: #800020; }
+.theme-culture .activity-card { border-bottom: 5px solid #800020; }
+.theme-culture .card-icon     { background-color: #fde8ec; }
+.theme-culture h3             { color: #800020; }
+.theme-culture .place-chip    { background-color: #fde8ec; color: #800020; }
+
+/* Food = orange */
+.theme-food .section-head     { background-color: #c2410c; }
+.theme-food .activity-card    { border-bottom: 5px solid #c2410c; }
+.theme-food .card-icon        { background-color: #ffedd5; }
+.theme-food h3                { color: #c2410c; }
+.theme-food .place-chip       { background-color: #ffedd5; color: #c2410c; }
+
+/* Crafts = blue */
+.theme-craft .section-head    { background-color: #1d4ed8; }
+.theme-craft .activity-card   { border-bottom: 5px solid #1d4ed8; }
+.theme-craft .card-icon       { background-color: #dbeafe; }
+.theme-craft h3               { color: #1d4ed8; }
+.theme-craft .place-chip      { background-color: #dbeafe; color: #1d4ed8; }
+
+/* ---------- 9E. BOTTOM BANNER ("Ready to start planning?") ---------- */
+.cta-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: #5a0014;
+    color: #ffffff;
+    border: 3px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+}
+
+.cta-banner h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f59e0b;
+    font-size: 1.4rem;
+}
+
+.cta-banner h2 img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.cta-banner a {
+    background-color: #f59e0b;
+    color: #5a0014;
+    font-weight: bold;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta-banner a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* HISTORY.HTML (HISTORY & CULTURE STYLES)*/
+
+/* shared lang ni sila ari n apart: */
+.content-box h3 {
+    font-size: 1.2rem;
+    border-left: 3px solid #d97706;
+    padding-left: 0.5rem;
+}
+/* Cultural Highlights*/
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin: 1rem 0 1.8rem 0;
+}
+
+.culture-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #f59e0b;
+    transition: all 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 14, 23, 0.25);
+}
+
+.culture-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.culture-card:hover img {
+    transform: scale(1.05);   /* gamay nga zoom pag hover */
+}
+
+.culture-text {
+    padding: 1rem 1.2rem 1.2rem 1.2rem;
+}
+
+.culture-text h4 {
+    color: #800020;
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+}
+
+.culture-text p {
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+
+/* PLAN-TRIP (TRAVEL GUIDE)*/
+/* 3-Day Itinerary Table */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.itinerary-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.itinerary-table th,
+.itinerary-table td {
+    padding: 0.9rem 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.itinerary-table th {
+    background-color: #800020;
+    color: #ffffff;
+}
+
+.itinerary-table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.itinerary-table tbody tr:hover {
+    background-color: #fef3c7;   /* mo highlight ang row pag hover */
+}
+
+/* Photo sa matag Day (Day 1, 2, 3) sa itinerary table */
+.day-img {
+    display: block;
+    width: 100%;
+    min-width: 120px;
+    max-width: 170px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Contact Form Elements */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #1f2937;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #800020;
+    box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.2);
+}
+
+.submit-btn {
+    background-color: #d97706;
+    color: #ffffff;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #b45309;
+    transform: translateY(-2px);
+}
+
+
+/* PARA SA PHONE (mobile) */
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0.2rem;
+    }
+
+    .hero-banner {
+        height: 60vh;
+    }
+
+    .hero-content {
+        padding-top: 15vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+    }
+
+    .video-card video {
+        height: 220px;       /* vid height sa phone */
+    }
+
+    /* activities page sa phone */
+    .section-head {
+        flex-direction: column;
+        text-align: center;
+    }
+}
